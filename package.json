@@ -1,0 +1,27 @@
+{
+  "name": "travelline",
+  "version": "1.0.0",
+  "description": "CMS для управления контентом TravelLine Tech",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "cms",
+    "travelline",
+    "content-management"
+  ],
+  "author": "TravelLine Tech Team",
+  "license": "MIT",
+  "type": "commonjs",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^6.3.4"
+  }
+}

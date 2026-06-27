@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Управление контентом</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="container">
+        <h1>⚙️ Редактор контента</h1>
+        <p class="subtitle">Редактируйте значения в полях ниже. Изменения вступят в силу после нажатия «Сохранить».</p>
+
+        <!-- Hero -->
+        <div class="hero-block">
+            <h2>📝 Заголовок Hero (главный экран)</h2>
+            <div class="field-group">
+                <label for="hero-title-input">Текст заголовка</label>
+                <textarea id="hero-title-input" rows="3" placeholder="Введите заголовок..."></textarea>
+                <div class="hint">💡 Используйте &lt;br&gt; для переноса строки</div>
+            </div>
+        </div>
+
+        <!-- Преимущества -->
+        <h2 class="section-title">📋 Преимущества</h2>
+        <p class="section-desc">Редактируйте заголовки и описания для блока преимуществ.</p>
+
+        <div id="items-container"></div>
+
+        <!-- Команда -->
+        <div class="team-block">
+            <h2>
+                👥 Управление командой
+                <button onclick="toggleTeamEditor()" class="btn btn-primary btn-sm">
+                    Показать/Скрыть
+                </button>
+            </h2>
+            
+            <div id="team-editor" class="team-editor" style="display: none;">
+                <div class="team-info">
+                    <h3>Основная информация</h3>
+                    <div class="field-group">
+                        <label for="team-title-input">Заголовок</label>
+                        <input type="text" id="team-title-input" placeholder="Заголовок блока команды">
+                    </div>
+                    <div class="field-group">
+                        <label for="team-desc-input">Описание</label>
+                        <input type="text" id="team-desc-input" placeholder="Описание блока команды">
+                    </div>
+                </div>
+                
+                <h3>Члены команды</h3>
+                <div id="team-members-container"></div>
+                
+                <button onclick="addTeamMember()" class="btn btn-primary btn-add-member">
+                    ➕ Добавить участника
+                </button>
+            </div>
+        </div>
+
+        <!-- Направления -->
+        <div class="team-block">
+            <h2>
+                🎯 Управление направлениями
+                <button onclick="toggleDirectionsEditor()" class="btn btn-primary btn-sm">
+                    Показать/Скрыть
+                </button>
+            </h2>
+            
+            <div id="directions-editor" class="team-editor" style="display: none;">
+                <div id="directions-container"></div>
+                <button onclick="addDirection()" class="btn btn-primary btn-add-member">
+                    ➕ Добавить направление
+                </button>
+            </div>
+        </div>
+
+        <!-- Вакансии -->
+        <div class="team-block">
+            <h2>
+                💼 Управление вакансиями
+                <button onclick="toggleVacanciesEditor()" class="btn btn-primary btn-sm">
+                    Показать/Скрыть
+                </button>
+            </h2>
+            
+            <div id="vacancies-editor" class="team-editor" style="display: none;">
+                <div id="vacancies-container"></div>
+                <button onclick="addVacancy()" class="btn btn-primary btn-add-member">
+                    ➕ Добавить вакансию
+                </button>
+            </div>
+        </div>
+
+        <div class="actions">
+            <button class="btn btn-reset" onclick="resetToDefault()">🔄 Сбросить к исходным</button>
+            <button class="btn btn-success" onclick="saveData()">💾 Сохранить изменения</button>
+        </div>
+
+        <div id="status-message" class="status-message" style="display: none;"></div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>

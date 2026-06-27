@@ -1,0 +1,436 @@
+/* ========== ОБЩИЕ СТИЛИ ========== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f7fc;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+h1 {
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 15px;
+    margin-top: 0;
+}
+
+.subtitle {
+    color: #718096;
+    margin-bottom: 25px;
+}
+
+.section-title {
+    font-size: 18px;
+    color: #2d3748;
+    margin-top: 30px;
+}
+
+.section-desc {
+    color: #718096;
+    font-size: 14px;
+}
+
+/* ========== HERO БЛОК ========== */
+.hero-block {
+    background: #f0f4ff;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    border: 2px solid #3182ce;
+}
+
+.hero-block h2 {
+    margin-top: 0;
+    color: #2b6cb0;
+    font-size: 18px;
+}
+
+.hero-block .field-group {
+    margin-bottom: 0;
+}
+
+.hero-block textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    resize: vertical;
+    transition: 0.2s;
+    box-sizing: border-box;
+}
+
+.hero-block textarea:focus {
+    outline: none;
+    border-color: #3182ce;
+    box-shadow: 0 0 0 3px rgba(49,130,206,0.1);
+}
+
+.hero-block .hint {
+    font-size: 12px;
+    color: #718096;
+    margin-top: 4px;
+}
+
+/* ========== ПРЕИМУЩЕСТВА ========== */
+.item-block {
+    display: flex;
+    gap: 20px;
+    padding: 15px 0;
+    border-bottom: 1px solid #edf2f7;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.item-block:last-child {
+    border-bottom: none;
+}
+
+.item-fields {
+    flex: 1;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.item-number {
+    font-weight: bold;
+    color: #a0aec0;
+    min-width: 30px;
+}
+
+/* ========== ПОЛЯ ВВОДА ========== */
+.field-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 150px;
+}
+
+.field-group label {
+    font-size: 12px;
+    font-weight: 600;
+    color: #718096;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+}
+
+.field-group input,
+.field-group textarea {
+    padding: 10px 12px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: 0.2s;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+.field-group textarea {
+    resize: vertical;
+}
+
+.field-group input:focus,
+.field-group textarea:focus {
+    outline: none;
+    border-color: #3182ce;
+    box-shadow: 0 0 0 3px rgba(49,130,206,0.1);
+}
+
+/* ========== КНОПКИ ========== */
+.btn {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+    font-size: 16px;
+}
+
+.btn-sm {
+    padding: 6px 16px;
+    font-size: 14px;
+}
+
+.btn-primary {
+    background: #3182ce;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #2c5282;
+}
+
+.btn-success {
+    background: #38a169;
+    color: white;
+}
+
+.btn-success:hover {
+    background: #276749;
+}
+
+.btn-danger {
+    background: #e53e3e;
+    color: white;
+}
+
+.btn-danger:hover {
+    background: #c53030;
+}
+
+.btn-reset {
+    background: #e2e8f0;
+    color: #4a5568;
+}
+
+.btn-reset:hover {
+    background: #cbd5e0;
+}
+
+.btn-add-member {
+    margin-top: 15px;
+    width: 100%;
+}
+
+/* ========== КНОПКА УДАЛЕНИЯ ========== */
+.btn-remove {
+    background: #fc8181;
+    color: white;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    height: 38px;
+    align-self: flex-end;
+}
+
+.btn-remove:hover {
+    background: #e53e3e;
+}
+
+.btn-remove-direction {
+    background: #fc8181;
+    color: white;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-remove-direction:hover {
+    background: #e53e3e;
+}
+
+/* ========== ДЕЙСТВИЯ ========== */
+.actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* ========== СТАТУС СООБЩЕНИЯ ========== */
+.status-message {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background: #ebf8ff;
+    border-left: 4px solid #3182ce;
+    color: #2b6cb0;
+}
+
+.status-message.error {
+    background: #fff5f5;
+    border-color: #e53e3e;
+    color: #c53030;
+}
+
+.status-message.success {
+    background: #f0fff4;
+    border-color: #38a169;
+    color: #276749;
+}
+
+/* ========== БЛОКИ КОМАНДА/НАПРАВЛЕНИЯ/ВАКАНСИИ ========== */
+.team-block {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 3px solid #e2e8f0;
+}
+
+.team-block h2 {
+    font-size: 20px;
+    color: #2d3748;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 0;
+    flex-wrap: wrap;
+}
+
+.team-block h3 {
+    color: #2d3748;
+    margin-top: 0;
+}
+
+.team-editor {
+    margin-top: 20px;
+}
+
+.team-info {
+    background: #f7fafc;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.team-info .field-group {
+    margin-bottom: 15px;
+}
+
+.team-info .field-group:last-child {
+    margin-bottom: 0;
+}
+
+.team-member-block {
+    display: flex;
+    gap: 15px;
+    padding: 15px;
+    background: #f7fafc;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    border: 1px solid #e2e8f0;
+}
+
+.team-member-block .field-group {
+    flex: 1;
+    min-width: 120px;
+}
+
+.team-member-block .field-group input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ========== НАПРАВЛЕНИЯ ========== */
+.direction-block {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    background: #f7fafc;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #e2e8f0;
+}
+
+.direction-block .field-group {
+    margin-bottom: 0;
+}
+
+.direction-block .field-group textarea {
+    min-height: 80px;
+}
+
+.direction-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.direction-header .item-number {
+    font-size: 14px;
+}
+
+/* ========== ВАКАНСИИ ========== */
+.vacancy-block {
+    display: flex;
+    gap: 15px;
+    padding: 15px;
+    background: #f7fafc;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    border: 1px solid #e2e8f0;
+}
+
+.vacancy-block .field-group {
+    flex: 1;
+    min-width: 150px;
+}
+
+.vacancy-block .field-group input {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ========== ПУСТЫЕ СОСТОЯНИЯ ========== */
+.empty-members {
+    color: #718096;
+    text-align: center;
+    padding: 20px;
+    background: #f7fafc;
+    border-radius: 8px;
+}
+
+/* ========== АДАПТИВНОСТЬ ========== */
+@media (max-width: 600px) {
+    .item-block {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .item-number {
+        text-align: center;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+
+    .actions .btn {
+        width: 100%;
+    }
+
+    .team-member-block {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .team-member-block .btn-remove {
+        align-self: stretch;
+    }
+
+    .direction-block {
+        padding: 15px;
+    }
+
+    .vacancy-block {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .vacancy-block .btn-remove {
+        align-self: stretch;
+    }
+}
